@@ -12,15 +12,14 @@
             <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
         <span>
-            <slot />
+            {{ item.label }}
         </span>
     </h2>
 </template>
 
-<script>
-    export default {
-        name: 'SidebarTitle',
-    };
+<script lang="ts" setup>
+    const props = defineProps<{ item: { label: string, icon?: string } }>()
+
 </script>
 
 <style scoped>

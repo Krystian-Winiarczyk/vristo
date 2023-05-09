@@ -296,6 +296,8 @@
             </div>
         </template>
 
+        <modal v-model='addContactModal'/>
+
         <!-- add contact modal -->
         <TransitionRoot appear :show="addContactModal" as="template">
             <Dialog as="div" @close="addContactModal = false" class="relative z-50">
@@ -396,6 +398,7 @@
     import { TransitionRoot, TransitionChild, Dialog, DialogPanel, DialogOverlay } from '@headlessui/vue';
     import Swal from 'sweetalert2';
     import { useMeta } from '@/composables/use-meta';
+    import Modal from '@/components/Modal.vue';
     useMeta({ title: 'Contacts' });
 
     const defaultParams = ref({

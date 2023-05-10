@@ -23,7 +23,7 @@
     })
 
     const badgeClasses = computed((): Array<string> => {
-        const listOfClasses = ['badge'];
+        const listOfClasses: Array<string> = ['badge'];
 
         listOfClasses.push(
             props.outline ? `badge-outline-${props.color}` : `badge-${props.color}`

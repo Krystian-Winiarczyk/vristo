@@ -22,12 +22,12 @@
         classes: [],
     })
 
-    const avatarComponent = computed(() => {
+    const avatarComponent = computed((): string => {
         return props.src ? 'img' : 'span'
     })
 
-    const avatarClasses = computed(() => {
-        const listOfClasses = ['overflow-hidden', 'object-cover', 'ring-2', 'ring-white', 'dark:ring-white-dark'];
+    const avatarClasses = computed((): Array<string> => {
+        const listOfClasses: Array<string> = ['overflow-hidden', 'object-cover', 'ring-2', 'ring-white', 'dark:ring-white-dark'];
 
         listOfClasses.push(`w-${props.size || 12} h-${props.size || 12}`)
 

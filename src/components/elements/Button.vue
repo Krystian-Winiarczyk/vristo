@@ -1,5 +1,5 @@
 <template>
-    <button :class="[...buttonClasses, ...classes]">
+    <button type='button' :class="[...buttonClasses, ...classes]">
         <slot />
     </button>
 </template>
@@ -28,7 +28,7 @@
     })
 
     const buttonClasses = computed((): Array<string> => {
-        const listOfClasses = ['btn'];
+        const listOfClasses: Array<string> = ['btn', 'my-1', 'inline mx-1'];
 
         if (props.size) listOfClasses.push(`btn-${props.size}`)
         if (props.color) {

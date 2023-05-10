@@ -54,8 +54,8 @@ app.use(vue3JsonExcel);
 
 // Global components
 import { registerGlobalComponents } from '@/global-components';
-registerGlobalComponents(app);
-
-app.mount('#app');
+registerGlobalComponents(app).then(() => {
+    app.mount('#app');
+});
 
 export default app;

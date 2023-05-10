@@ -20,11 +20,11 @@
         classes: [],
     })
 
-    const avatarComponent = computed(() => {
+    const avatarComponent = computed((): string => {
         return props.src ? 'img' : 'span'
     })
 
-    const avatarGroupClasses = computed(() => {
+    const avatarGroupClasses = computed((): Array<string> => {
         return ['flex', 'items-center', 'justify-center', '-space-x-4 ', 'rtl:space-x-reverse ', 'text-white']
     })
 </script>

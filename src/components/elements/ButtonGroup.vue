@@ -17,7 +17,7 @@
         classes: [],
     })
 
-    const buttonGroupClasses = computed(() => {
+    const buttonGroupClasses = computed((): string => {
         return props.vertical
             ? 'relative inline-flex align-middle flex-col items-start justify-center'
             : 'relative inline-flex align-middle'

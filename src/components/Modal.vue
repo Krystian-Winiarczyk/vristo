@@ -15,7 +15,7 @@
 
                 <div class="fixed inset-0 overflow-y-auto">
                     <div class="flex min-h-full items-start justify-center px-4 py-8">
-                        <TransitionChild
+                        <wTransitionChild
                             as="template"
                             enter="duration-300 ease-out"
                             enter-from="opacity-0 scale-95"
@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                             </DialogPanel>
-                        </TransitionChild>
+                        </wTransitionChild>
                     </div>
                 </div>
             </Dialog>
@@ -82,8 +82,8 @@
         hideCancel: false,
         hideColor: Colors.DANGER,
 
-        size?: Sizes,
-        classes?: Array<string>,
+        size: Sizes.LG,
+        classes: [],
     })
 
     const emits = defineEmits(['update:modelValue'])
